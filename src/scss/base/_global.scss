@@ -1,0 +1,55 @@
+.shape {
+    background: rgb(255,255,255);
+    background: linear-gradient(60deg, rgb(255, 255, 255) 0%, rgba(0,0,0,1) 120%); 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0.3;
+    transform: translate(-50%, -50%);
+    width: 37.5rem;
+    height: 35rem;
+    background-color: rgba(128, 128, 128, 0.312);
+    mix-blend-mode: color-burn;
+    // border-radius: 68% 71% 69% 70% / 72% 71% 63% 64%;  
+    border-radius: 50% 50% 41% 59% / 54% 42% 58% 46% ;  
+    z-index: 99;
+}
+
+.noise {
+    background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0.479) 200%); 
+    mix-blend-mode: multiply;
+    width: 100vw;
+    opacity: 0.7;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.introduction {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: ocr-a-std, monospace;
+    color: $primary;
+    width: 100vw;
+    z-index: 100;
+    text-align: center;
+
+    .name {
+        font-size: 1.85rem;
+        margin-bottom: 3rem;
+    }
+
+    .title {
+        font-size: 1rem;
+        position: relative;
+        top: 1rem;
+    }
+}
+
+body {
+    font-family: ocr-a-std, monospace;
+    color: $primary;
+}
