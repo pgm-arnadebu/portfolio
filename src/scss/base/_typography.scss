@@ -1,3 +1,31 @@
-h1 {
-    margin-bottom: 20rem;
+
+
+p {
+    margin-bottom: 1rem;
+}
+
+.heading {
+    font-size: 2rem;
+    position: relative;
+    text-align: center;
+    margin-bottom: 4rem;
+
+    &::after {
+        position: absolute;
+        height: 2px;
+        background-color: $color-primary;
+        width: 3rem;
+        bottom: -1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        content: "";
+    }
+}
+
+.heading--white {
+    color: white;
+
+    &::after {
+        background-color: white;
+    }
 }

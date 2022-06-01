@@ -11,30 +11,102 @@
 </head>
 
 <body>
+    <!-- <div class="noise-bg"></div> -->
+
+    <div class="isolate">
+        <div class="noise"></div>
+    </div>
+
+    <!-- <div class="isolate">
+        <div class="shape-noise"></div>
+        <div class="shape-overlay"></div>
+    </div> -->
+    
     <section class="hero">
-        <div class="hero__content wrapper">
-            <header class="header wrapper">
-                <svg class="header__logo" xmlns="http://www.w3.org/2000/svg" width="44" height="59" viewBox="0 0 44 59"><g transform="translate(-139 -26)"><text transform="translate(139 64)" fill="#465cc5" font-size="39" font-family="PlakatoPro-Regular, Plakato Pro"><tspan x="0" y="0">d</tspan></text><text transform="translate(160 68)" fill="#465cc5" font-size="39" font-family="PlakatoPro-Regular, Plakato Pro"><tspan x="0" y="0">b</tspan></text></g></svg>
+        <div class="hero__content">
+            <header class="header wr wr-lg">
+                <svg class="header__logo" xmlns="http://www.w3.org/2000/svg" width="44" height="59" viewBox="0 0 44 59"> <g transform="translate(-139 -26)"><text transform="translate(139 64)" fill="#465cc5" font-size="39" font-family="PlakatoPro-Regular, Plakato Pro"> <tspan x="0" y="0">d</tspan> </text><text transform="translate(160 68)" fill="#465cc5" font-size="39" font-family="PlakatoPro-Regular, Plakato Pro"> <tspan x="0" y="0">b</tspan> </text></g> </svg>
                 <a href="#" class="header__nav">menu</a>
-                <a href="/contact" class="header__contact">contact</a> 
+                <a href="/contact" class="header__contact hide">contact</a>
             </header>
+
+            <div class="hero__body">
+                <span class="hero__name">Arnaud<br/>De Burchgraeve</span><br />
+                <span class="hero__title">Developer & Designer</span>
+                <div class="hero__shape isolate">
+                    <div class="shape-noise"></div>
+                </div>
+            </div>
+
             <div class="hero__footer">
                 <p>Creatieve duizendpoot, begeesterd door code met een vurige passie voor esthetiek</p>
             </div>
         </div>
     </section>
-    <svg class="noise" viewBox='0 0 250 550' xmlns='http://www.w3.org/2000/svg'>
-        <filter id='noiseFilter'>
-            <feTurbulence type='fractalNoise' baseFrequency='4' numOctaves='3' stitchTiles='stitch' />
-        </filter>
-        <rect width='100%' height='100%' filter='url(#noiseFilter)' />
-    </svg>
-    <div class="shape"></div>
 
-    <div class="introduction">
-        <span class="name">Arnaud De Burchgraeve</span><br />
-        <span class="title">Creative Developer & Graphic Designer</span>
-    </div>
+    <section class="about">
+        <h1 class="heading">Over mij</h1>
+
+        <div class="about__text">
+            <p>Hoi, Ik ben Arnaud De Burchgraeve. Een front-end ontwikkelaar en grafische vormgever afkomstig uit Brussel.</p>
+            <p>Een fraai design doet me opleven, dàt kunnen omzetten naar een functionele en responsieve web applicatie doet me helemaal zweven</p>
+            <p>Naast het ontwerpen en programmeren geniet ik van mijn leven als partner, vriend en vader.</p></p>
+        </div>
+    
+        <picture class="about__img">
+            <img src="/images/me-1.png" alt="">
+            <div class="about__shape isolate">
+                <div class="shape-noise"></div>
+            </div>
+        </picture>
+
+    </section>
+    
+    <section class="skills">
+        <h1 class="heading heading--white">Skills</h1>
+        <div class="skills__content wr wr-lg">
+            <div class="skill">
+                <svg class="skill__svg" xmlns="http://www.w3.org/2000/svg" width="166.374" height="176.973"><g data-name="Group 58" fill="none" stroke="#fff" stroke-miterlimit="10"><path data-name="Rectangle 22" stroke-width="2.2" d="M140.184 1.1v158.201H1.099V1.1z"/><path data-name="Rectangle 23" stroke-width="3.2" d="M164.774 17.172v158.201H25.689V17.172z"/></g></svg>
+                <span class="skill__name">UI Interface</span>
+            </div>
+            <div class="skill">
+                <svg class="skill__svg" xmlns="http://www.w3.org/2000/svg" width="188.828" height="197.429"><g data-name="Group 59" transform="translate(-583.292 -2042.087)" fill="none" stroke="#fff" stroke-miterlimit="10"><path data-name="Rectangle 18" stroke-width="2.2" d="M619.67 2070.591h132.263v132.263H619.67z"/><circle data-name="Ellipse 1" cx="45.049" cy="45.049" r="45.049" transform="translate(595.751 2046.668)" stroke-width="2.2"/><path data-name="Path 2" d="m770.053 2237.074-91.8-32.965-91.811-32.969 74.452-63.017 74.452-63.023 17.356 95.988Z" stroke-width="3.2"/></g></svg>            <span class="skill__name">UI Interface</span>
+            </div>
+            <div class="skill">
+                <svg class="skill__svg" xmlns="http://www.w3.org/2000/svg" width="173.692" height="195.654" viewBox="0 0 173.692 195.654"> <g id="Group_60" data-name="Group 60" transform="translate(-971.954 -2039.88)"> <path id="Path_9" data-name="Path 9" d="M302.864,112.037l-62.629,66.936-.965-.908,61.748-66-61.13-61.13.939-.939,23.887,23.887Z" transform="translate(805.19 1990.94)" fill="#fff" stroke="#fff" stroke-width="1.5"/> <path id="Path_10" data-name="Path 10" d="M167.52,262.046l62.629-66.936.965.908-61.748,66,61.13,61.13-.939.939L205.67,300.2Z" transform="translate(845.019 1910.391)" fill="#fff" stroke="#fff" stroke-width="1.5"/> <path id="Path_11" data-name="Path 11" d="M163.456,246.052a86.6,86.6,0,1,1,86.6-86.6A86.694,86.694,0,0,1,163.456,246.052Zm0-171.7a85.1,85.1,0,1,0,85.1,85.1A85.2,85.2,0,0,0,163.456,74.355Z" transform="translate(895.344 1978.251)" fill="#fff" stroke="#fff" stroke-width="0.5"/> </g> </svg>            
+                <span class="skill__name">UI Interface</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="tools">
+        <div class="tools__block">
+            <h2 class="tools__title">Graphic Design</h2>
+            <ul class="tools__img-container">
+                <li><img src="/images/illustrator.png" alt=""></li>
+                <li><img src="/images/photoshop.png" alt=""></li>
+                <li><img src="/images/indesign.png" alt=""></li>
+                <li><img src="/images/lightroom.png" alt=""></li>
+            </ul>
+            <div class="tools__shape isolate">
+                <div class="shape-noise"></div>
+            </div>
+        </div>
+        <div class="tools__block">
+            <h2 class="tools__title inverted">Front-end Development</h2>
+            <ul class="tools__img-container">
+                <li><img src="/images/gsap.png" alt=""></li>
+                <li><img src="/images/xd.png" alt=""></li>
+                <li><img src="/images/react.png" alt=""></li>
+                <li><img src="/images/node.png" alt=""></li>
+                <li><img src="/images/eleventy.png" alt=""></li>
+                <li><img src="/images/js.png" alt=""></li>
+                <li><img src="/images/css.png" alt=""></li>
+                <li><img src="/images/html.png" alt=""></li>
+            </ul>
+        </div>
+    </section>
+
 </body>
 
 </html>

@@ -1,13 +1,13 @@
-.shape {
+.shape-2 {
     background: rgb(255,255,255);
     background: linear-gradient(60deg, rgb(255, 255, 255) 0%, rgba(0,0,0,1) 120%); 
     position: absolute;
-    top: 50%;
+    top: 51%;
     left: 50%;
     opacity: 0.3;
     transform: translate(-50%, -50%);
-    width: 37.5rem;
-    height: 35rem;
+    width: 33.5rem;
+    height: 30rem;
     background-color: rgba(128, 128, 128, 0.312);
     mix-blend-mode: color-burn;
     // border-radius: 68% 71% 69% 70% / 72% 71% 63% 64%;  
@@ -15,41 +15,68 @@
     z-index: 99;
 }
 
-.noise {
-    background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0.479) 200%); 
-    mix-blend-mode: multiply;
+body {
+    font-family: ocr-a-std, monospace;
+    color: $color-primary;
+    line-height: 1.5;
+}
+
+.noise-bg {
+    background: rgb(255, 255, 255);
+    background-image: url('/images/noise-mobile.svg');
+    background-size: 100%;
     width: 100vw;
-    opacity: 0.7;
+    height: 300vh;
+    mix-blend-mode: color-burn;
+    opacity: 0.6;
     position: absolute;
     left: 0;
     top: 0;
-    z-index: -1;
+    z-index: -100;
 }
 
-.introduction {
+.hide {
+    display: none;
+}
+
+.noise {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: ocr-a-std, monospace;
-    color: $primary;
+    top: 0;
     width: 100vw;
-    z-index: 100;
-    text-align: center;
-
-    .name {
-        font-size: 1.85rem;
-        margin-bottom: 3rem;
-    }
-
-    .title {
-        font-size: 1rem;
-        position: relative;
-        top: 1rem;
-    }
+    height: 400vh;
+    background: 
+    linear-gradient(273deg, rgba(255, 255, 255, 0) 0%, rgba(125, 125, 125, 0.403) 100%), 
+    url('/images/noise-mobile.svg'); 
+    filter: contrast(200%) brightness(115%); 
+    opacity: 0.9;
 }
 
-body {
-    font-family: ocr-a-std, monospace;
-    color: $primary;
+.isolate {
+    isolation: isolate;
+    mix-blend-mode: color-burn;
+}
+
+.shape-noise {
+    position: absolute;
+    top: 0;
+    width: 20rem;
+    height: 20rem;
+    mix-blend-mode: color-burn;
+    border-radius: 50% 50% 41% 59% / 54% 42% 58% 46%;  
+    background: 
+    // linear-gradient(60deg, rgba(255, 255, 255, 0) 0%, rgb(26, 26, 26) 100%),
+    radial-gradient(circle, rgba(239, 239, 239, 0) 0%, rgba(0,0,0,1) 150%), 
+    url('/images/noise-mobile.svg'); 
+      filter: contrast(170%) brightness(150%);
+}
+
+.shape-overlay {
+    position: absolute;
+    top: 0;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50% 50% 41% 59% / 54% 42% 58% 46% ;  
+    background: blue;
+    opacity: 0.1;
+    mix-blend-mode: multiply;
 }

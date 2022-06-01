@@ -1,0 +1,41 @@
+.about {
+    width: 100vw;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+        .about__text {
+            text-align: center;
+            width: calc(100vw - 4rem);
+            font-size: 0.9rem;
+            margin-bottom: 2.5rem;
+        }
+    
+        .about__img {
+            margin-top: auto;
+            transform: scale(1.1);
+            position: relative;
+            left: 20%;
+            
+            img {
+                position: relative;
+                max-width: 15rem;
+                z-index: 100;
+            }
+
+            .about__shape {
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 0;
+
+                .shape-noise {
+                    height: 20rem;
+                    width: 20rem;
+                    opacity: 0.35;
+                }
+            }
+
+    }
+}

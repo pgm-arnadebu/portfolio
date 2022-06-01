@@ -3,20 +3,18 @@
     align-items: center;
     gap: 3rem;
     height: 6rem;
-    padding: 0 2rem;
-
-    .header__logo {
-    }
+    width: 100%;
 
     .header__nav {
         position: relative;
+        font-family: ocr-a-std, monospace;
 
         &::before {
             content: "";
             position: absolute;
             height: 100%;
             width: 1px;
-            background-color: black;
+            background-color: $color-secondary;
             left: -1.5rem;
             z-index: 100;
         }
