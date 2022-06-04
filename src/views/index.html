@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,33 +8,25 @@
     <link rel="stylesheet" href="https://use.typekit.net/utj5udy.css">
     <title>Document</title>
 </head>
-
 <body>
-    <!-- <div class="noise-bg"></div> -->
-
-    <div class="isolate">
-        <div class="noise"></div>
-    </div>
-
-    <!-- <div class="isolate">
-        <div class="shape-noise"></div>
-        <div class="shape-overlay"></div>
-    </div> -->
+    <svg class="bg-noise" viewBox="0 0 600 20000" xmlns="http://www.w3.org/2000/svg"><filter id="a"><feTurbulence type="fractalNoise" baseFrequency="3" numOctaves="1" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#a)"/></svg>
     
     <section class="hero">
         <div class="hero__content">
-            <header class="header wr wr-lg">
-                <svg class="header__logo" xmlns="http://www.w3.org/2000/svg" width="44" height="59" viewBox="0 0 44 59"> <g transform="translate(-139 -26)"><text transform="translate(139 64)" fill="#465cc5" font-size="39" font-family="PlakatoPro-Regular, Plakato Pro"> <tspan x="0" y="0">d</tspan> </text><text transform="translate(160 68)" fill="#465cc5" font-size="39" font-family="PlakatoPro-Regular, Plakato Pro"> <tspan x="0" y="0">b</tspan> </text></g> </svg>
+            <header class="header">
+                <svg class="header__logo" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1095 1157"><path d="M311.72,612.66c110.19,0,199.01,89.95,199.01,200.14s-88.82,200.14-199.01,200.14h-102.32v-400.27h102.32Z"/><path d="M686.59,612.66c110.19,0,199.01,89.95,199.01,200.14s-88.82,200.14-199.01,200.14h-102.32v-400.27h102.32Z"/><path d="M686.59,144.07c110.19,0,199.01,89.95,199.01,200.14s-88.82,200.14-199.01,200.14h-102.32V144.07h102.32Z"/></svg>                
                 <a href="#" class="header__nav">menu</a>
                 <a href="/contact" class="header__contact hide">contact</a>
             </header>
 
             <div class="hero__body">
+                <div class="hero__shape isolate">
+                    <div class="d-1 shape-noise"></div>
+                    <div class="d-2 shape-noise"></div>
+                    <div class="d-3 shape-noise"></div>
+                </div>
                 <span class="hero__name">Arnaud<br/>De Burchgraeve</span><br />
                 <span class="hero__title">Developer & Designer</span>
-                <div class="hero__shape isolate">
-                    <div class="shape-noise"></div>
-                </div>
             </div>
 
             <div class="hero__footer">
@@ -45,43 +36,46 @@
     </section>
 
     <section class="about">
-        <h1 class="heading">Over mij</h1>
+        <h1 class="block-heading">Over mij</h1>
 
-        <div class="about__text">
-            <p>Hoi, Ik ben Arnaud De Burchgraeve. Een front-end ontwikkelaar en grafische vormgever afkomstig uit Brussel.</p>
-            <p>Een fraai design doet me opleven, dàt kunnen omzetten naar een functionele en responsieve web applicatie doet me helemaal zweven</p>
-            <p>Naast het ontwerpen en programmeren geniet ik van mijn leven als partner, vriend en vader.</p></p>
-        </div>
-    
-        <picture class="about__img">
-            <img src="/images/me-1.png" alt="">
-            <div class="about__shape isolate">
-                <div class="shape-noise"></div>
+        <div class="about__content">
+            <div class="about__text">
+                <p>Hoi, Ik ben Arnaud De Burchgraeve.</p> 
+                <p>Een front-end ontwikkelaar en grafische vormgever afkomstig uit Brussel.</p>
+                <p>Een fraai design doet me opleven, dàt kunnen omzetten naar een functionele en responsieve web applicatie doet me helemaal zweven</p>
+                <p>Naast het ontwerpen en programmeren geniet ik van mijn leven als partner, vriend en vader.</p></p>
             </div>
-        </picture>
-
+        
+            <picture class="about__img">
+                <img src="/images/me-1.png" alt="">
+                <div class="about__shape isolate">
+                    <div class="shape-noise"></div>
+                </div>
+            </picture>
+        </div>
     </section>
     
     <section class="skills">
-        <h1 class="heading heading--white">Skills</h1>
-        <div class="skills__content wr wr-lg">
+        <h1 class="block-heading block-heading--white">Skills</h1>
+        <div class="skills__content">
             <div class="skill">
-                <svg class="skill__svg" xmlns="http://www.w3.org/2000/svg" width="166.374" height="176.973"><g data-name="Group 58" fill="none" stroke="#fff" stroke-miterlimit="10"><path data-name="Rectangle 22" stroke-width="2.2" d="M140.184 1.1v158.201H1.099V1.1z"/><path data-name="Rectangle 23" stroke-width="3.2" d="M164.774 17.172v158.201H25.689V17.172z"/></g></svg>
-                <span class="skill__name">UI Interface</span>
+                <svg class="skill__img" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 552 545"><g><path d="M407.6,435.36H88.78V73.28H407.6V435.36Zm-314.64-4.18H403.42V77.46H92.96V431.18Z"/><path d="M410.37,438.13H86V70.51H410.37V438.13Zm-314.64-9.73H400.64V80.24H95.73V428.4Z"/></g><g><path d="M463.22,471.72H144.4V109.64H463.22V471.72Zm-314.64-4.18H459.04V113.82H148.58V467.54Z"/><path d="M466,474.49H141.63V106.87H466V474.49Zm-314.64-9.73H456.27V116.6H151.36V464.76Z"/></g></svg>
+                <span class="skill__name">UI Design</span>
             </div>
             <div class="skill">
-                <svg class="skill__svg" xmlns="http://www.w3.org/2000/svg" width="188.828" height="197.429"><g data-name="Group 59" transform="translate(-583.292 -2042.087)" fill="none" stroke="#fff" stroke-miterlimit="10"><path data-name="Rectangle 18" stroke-width="2.2" d="M619.67 2070.591h132.263v132.263H619.67z"/><circle data-name="Ellipse 1" cx="45.049" cy="45.049" r="45.049" transform="translate(595.751 2046.668)" stroke-width="2.2"/><path data-name="Path 2" d="m770.053 2237.074-91.8-32.965-91.811-32.969 74.452-63.017 74.452-63.023 17.356 95.988Z" stroke-width="3.2"/></g></svg>            <span class="skill__name">UI Interface</span>
+                <svg class="skill__img" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 552 545"><g><polygon points="390.58 184.71 244.89 340.42 242.64 338.31 386.29 184.78 244.08 42.57 246.26 40.39 301.83 95.96 390.58 184.71"/><polygon points="245.03 344.82 238.25 338.46 381.97 184.85 239.69 42.57 246.26 36 394.9 184.64 245.03 344.82"/></g><g><polygon points="168.39 346.29 314.08 190.58 316.33 192.69 172.67 346.22 314.88 488.43 312.7 490.61 257.14 435.04 168.39 346.29"/><polygon points="312.71 495 164.07 346.36 313.93 186.18 320.71 192.54 176.99 346.15 319.28 488.43 312.71 495"/></g><g><path d="M276,466.4c-110.78,0-200.9-90.13-200.9-200.9S165.22,64.6,276,64.6s200.9,90.13,200.9,200.9-90.13,200.9-200.9,200.9Zm0-398.33c-108.86,0-197.43,88.57-197.43,197.43s88.57,197.43,197.43,197.43,197.43-88.57,197.43-197.43-88.57-197.43-197.43-197.43Z"/><path d="M276,469.5c-112.49,0-204-91.51-204-204S163.51,61.5,276,61.5s204,91.51,204,204-91.51,204-204,204Zm0-398.33c-107.16,0-194.33,87.18-194.33,194.33s87.18,194.33,194.33,194.33,194.33-87.18,194.33-194.33-87.18-194.33-194.33-194.33Z"/></g></svg>
+                <span class="skill__name">Front-end Development</span>
             </div>
             <div class="skill">
-                <svg class="skill__svg" xmlns="http://www.w3.org/2000/svg" width="173.692" height="195.654" viewBox="0 0 173.692 195.654"> <g id="Group_60" data-name="Group 60" transform="translate(-971.954 -2039.88)"> <path id="Path_9" data-name="Path 9" d="M302.864,112.037l-62.629,66.936-.965-.908,61.748-66-61.13-61.13.939-.939,23.887,23.887Z" transform="translate(805.19 1990.94)" fill="#fff" stroke="#fff" stroke-width="1.5"/> <path id="Path_10" data-name="Path 10" d="M167.52,262.046l62.629-66.936.965.908-61.748,66,61.13,61.13-.939.939L205.67,300.2Z" transform="translate(845.019 1910.391)" fill="#fff" stroke="#fff" stroke-width="1.5"/> <path id="Path_11" data-name="Path 11" d="M163.456,246.052a86.6,86.6,0,1,1,86.6-86.6A86.694,86.694,0,0,1,163.456,246.052Zm0-171.7a85.1,85.1,0,1,0,85.1,85.1A85.2,85.2,0,0,0,163.456,74.355Z" transform="translate(895.344 1978.251)" fill="#fff" stroke="#fff" stroke-width="0.5"/> </g> </svg>            
-                <span class="skill__name">UI Interface</span>
+                <svg class="skill__img" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 552 545"><g><path d="M458.48,436.84H116.83V95.19H458.48V436.84Zm-338.16-3.49H454.99V98.68H120.32V433.35Z"/><path d="M461.39,439.74H113.92V92.28H461.39V439.74Zm-338.16-9.3H452.09V101.58H123.23V430.44Z"/></g><g><path d="M172.59,267.86c-64.47,0-116.92-52.45-116.92-116.92S108.12,34.03,172.59,34.03s116.91,52.45,116.91,116.92-52.45,116.92-116.91,116.92Zm0-230.34c-62.54,0-113.43,50.88-113.43,113.43s50.88,113.43,113.43,113.43,113.43-50.88,113.43-113.43-50.88-113.43-113.43-113.43Z"/><path d="M172.59,270.77c-66.07,0-119.82-53.75-119.82-119.82S106.52,31.12,172.59,31.12s119.82,53.75,119.82,119.82-53.75,119.82-119.82,119.82Zm0-230.34c-60.94,0-110.52,49.58-110.52,110.52s49.58,110.52,110.52,110.52,110.52-49.58,110.52-110.52-49.58-110.52-110.52-110.52Z"/></g><g><path d="M505.3,525.24L30.19,354.63l2.31-1.95L415.5,28.47l89.8,496.77ZM37.05,353.39l463.74,166.53L413.15,35.04,37.05,353.39Z"/><path d="M509.06,529.68L24.46,355.66l6.15-5.2L417.47,23l91.59,506.68ZM42.77,352.35l454.27,163.13L411.18,40.51,42.77,352.35Z"/></g></svg>
+                <span class="skill__name">Graphic design</span>            
             </div>
         </div>
     </section>
 
     <section class="tools">
-        <div class="tools__block">
-            <h2 class="tools__title">Graphic Design</h2>
+        <div class="tools__content">
+            <h2 class="tools__title">Design</h2>
             <ul class="tools__img-container">
                 <li><img src="/images/illustrator.png" alt=""></li>
                 <li><img src="/images/photoshop.png" alt=""></li>
@@ -89,12 +83,12 @@
                 <li><img src="/images/lightroom.png" alt=""></li>
             </ul>
             <div class="tools__shape isolate">
-                <div class="shape-noise"></div>
+                <div class="d-1 shape-noise"></div>
             </div>
         </div>
-        <div class="tools__block">
-            <h2 class="tools__title inverted">Front-end Development</h2>
-            <ul class="tools__img-container">
+        <div class="tools__content inverted">
+            <h2 class="tools__title inverted">Development</h2>
+            <ul class="tools__img-container wrap">
                 <li><img src="/images/gsap.png" alt=""></li>
                 <li><img src="/images/xd.png" alt=""></li>
                 <li><img src="/images/react.png" alt=""></li>
@@ -104,8 +98,67 @@
                 <li><img src="/images/css.png" alt=""></li>
                 <li><img src="/images/html.png" alt=""></li>
             </ul>
+            <div class="tools__shape isolate">
+                <div class="d-2 shape-noise"></div>
+            </div>
         </div>
     </section>
+
+    <Section class="quote">
+        <span>Creativiteit zit in je bloed</span>
+    </Section>
+
+    <section class="projects">
+        <h1 class="block-heading">Projects</h1>
+        <div>
+            <h2>Web Development</h2>
+            <ul class="projects__container">
+                <li class="project" style="background-image: url('/images/gf.png');">
+                    <figcaption>GF2019</figcaption>
+                    <div class="project__detail">
+                        <span class="project__title">GF 2019</span>
+                        <p>Lorem exercitationem assumenda  necessitatibus, quidem blanditiis.</p>
+                        <a href="">Bekijk website</a>
+                    </div>
+                </li>
+                <li class="project" style="background-image: url('/images/gf.png');">
+                    <figcaption>GF2019</figcaption>
+                </li>
+                <li class="project" style="background-image: url('/images/gf.png');">
+                    <figcaption>GF2019</figcaption>
+                </li>
+                <li class="project" style="background-image: url('/images/gf.png');">
+                    <figcaption>GF2019</figcaption>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2>Graphic Design</h2>
+            <ul class="projects__container">
+                <li class="project" style="background-image: url('/images/gf.png');">
+                    <figcaption>GF2019</figcaption>
+                </li>
+                <li class="project" style="background-image: url('/images/gf.png');">
+                    <figcaption>GF2019</figcaption>
+                </li>
+                <li class="project" style="background-image: url('/images/gf.png');">
+                    <figcaption>GF2019</figcaption>
+                </li>
+                <li class="project" style="background-image: url('/images/gf.png');">
+                    <figcaption>GF2019</figcaption>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__content">
+            <svg class="footer__logo" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1095 1157"><path d="M311.72,612.66c110.19,0,199.01,89.95,199.01,200.14s-88.82,200.14-199.01,200.14h-102.32v-400.27h102.32Z"/><path d="M686.59,612.66c110.19,0,199.01,89.95,199.01,200.14s-88.82,200.14-199.01,200.14h-102.32v-400.27h102.32Z"/><path d="M686.59,144.07c110.19,0,199.01,89.95,199.01,200.14s-88.82,200.14-199.01,200.14h-102.32V144.07h102.32Z"/></svg>        
+            <h1>Zin om samen te werken?</h1>
+            <p class="footer__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum asperiores sed magnam qui repellat</p>
+            <a href="" class="footer__btn">Neem contact</a>
+        </div>
+    </footer>
 
 </body>
 

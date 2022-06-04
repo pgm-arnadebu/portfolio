@@ -1,19 +1,42 @@
 .tools {
-    margin-top: 5rem;
-    
-    .tools__block {
+    margin: 10rem 0 5rem;
+    width: 100vw;
+    position: relative;
+
+
+    .tools__content {
+        @include wrapper-sm;
         position: relative;
-        margin-bottom: 8rem;
+        margin-bottom: 5rem;
+        display: flex;
+        flex-direction: column;
+        padding-left: 2rem;
+
+        @include screen-md {
+            margin-bottom: 0;
+        }
+
+        &.inverted {
+            align-items: end;
+            padding-left: 0;
+            padding-right: 2rem;
+        }
 
         .tools__title {
             font-size: 1.5rem;
-            padding-left: 2rem;
             position: relative;
             margin-bottom: 2rem;
 
+            @include screen-md {
+                font-size: 2.25rem;
+            }
+
+            @include screen-lg {
+                margin-bottom: 3rem;
+            }
+
             &.inverted {
                 text-align: end;
-                padding-right: 2rem;
 
                 &::after {
                     position: absolute;
@@ -22,14 +45,19 @@
                     right: -2rem;
                     bottom: -1rem;
                     width: 40vw;
-                    background-color: $color-secondary;
+                    background-color: $color-primary-3;
+
+                    @include screen-lg {
+                        width: 15rem;
+                        right: 2.75rem;
+                    }
                 }
 
                 &::before {
                     display: none;
                 }
             }
-    
+
             &::before {
                 position: absolute;
                 content: "";
@@ -37,33 +65,97 @@
                 left: -2rem;
                 bottom: -1rem;
                 width: 40vw;
-                background-color: $color-secondary;
+                background-color: $color-primary-3;
+
+                @include screen-lg {
+                    width: 7.5rem;
+                    left: 2rem;
+                }
             }
-    
         }
-    
+
         .tools__img-container {
             display: flex;
             gap: 0.5rem;
-            padding-left: 2rem;
-    
-            li  img {
+
+            li img {
                 width: 3rem;
+
+                @include screen-sm {
+                    width: 4rem;
+                }
+
+                @include screen-lg {
+                    width: 4.5rem;
+                }
             }
-    
+
+            &.wrap {
+                width: 15rem;
+
+                @include screen-sm {
+                    width: 20rem;
+                }
+
+                @include screen-md {
+                    width: 100%;
+                    justify-content: end;
+                }
+
+                li {
+                    width: 22%;
+                    display: flex;
+                    justify-content: center;
+
+                    @include screen-md {
+                        width: fit-content;
+                    }
+                }
+            }
         }
+
         .tools__shape {
             position: absolute;
-            right: 30%;
-            opacity: 0.6;
-            top: -20%;
-   
-            
-    
+            $size: 20rem;
+            width: $size;
+            height: $size;
+
             .shape-noise {
-                width: 50vw;
-                height: 50vw;
+                position: relative;
             }
-        }
+            
+            .d-1 {
+                transform: scale(1.3) rotate(10deg);
+                opacity: 0.1;
+                
+                @include screen-sm {
+                    transform: scale(1.55) rotate(10deg);
+                }
+
+                @include screen-md {
+                    transform: scale(2) rotate(10deg);
+                    left: 60%;
+                    top: 15%; 
+                }
+            }
+            
+            .d-2 {
+                transform: scale(1.4) rotate(-9deg);
+                opacity: 0.1;
+                left: 20%;
+                bottom: 10%;
+
+                @include screen-sm {
+                    transform: scale(2) rotate(-9deg);
+                    bottom: 30%;
+                }
+
+                @include screen-md {
+                    transform: scale(1.85) rotate(-9deg);
+                    left: -35%;
+                    top: -30%;
+                }
+            }
+    }
     }
 }

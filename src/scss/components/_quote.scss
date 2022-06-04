@@ -1,0 +1,23 @@
+.quote {
+    @include wrapper-sm;
+    padding: 20rem 2rem 20rem;
+    span {
+        text-align: center;
+        width: 100%;
+        display: block;
+        font-size: 2.5rem;
+    
+        @include screen-sm {
+            font-size: 3rem;
+        }
+        @include screen-md {
+            font-size: 3.5rem;
+        }
+        @include screen-lg {
+            font-size: 4rem;
+        }
+        @include screen-xl {
+            font-size: 4.5rem;
+        }
+    }
+}

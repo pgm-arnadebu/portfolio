@@ -21,62 +21,6 @@ body {
     line-height: 1.5;
 }
 
-.noise-bg {
-    background: rgb(255, 255, 255);
-    background-image: url('/images/noise-mobile.svg');
-    background-size: 100%;
-    width: 100vw;
-    height: 300vh;
-    mix-blend-mode: color-burn;
-    opacity: 0.6;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -100;
-}
-
 .hide {
     display: none;
-}
-
-.noise {
-    position: absolute;
-    top: 0;
-    width: 100vw;
-    height: 400vh;
-    background: 
-    linear-gradient(273deg, rgba(255, 255, 255, 0) 0%, rgba(125, 125, 125, 0.403) 100%), 
-    url('/images/noise-mobile.svg'); 
-    filter: contrast(200%) brightness(115%); 
-    opacity: 0.9;
-}
-
-.isolate {
-    isolation: isolate;
-    mix-blend-mode: color-burn;
-}
-
-.shape-noise {
-    position: absolute;
-    top: 0;
-    width: 20rem;
-    height: 20rem;
-    mix-blend-mode: color-burn;
-    border-radius: 50% 50% 41% 59% / 54% 42% 58% 46%;  
-    background: 
-    // linear-gradient(60deg, rgba(255, 255, 255, 0) 0%, rgb(26, 26, 26) 100%),
-    radial-gradient(circle, rgba(239, 239, 239, 0) 0%, rgba(0,0,0,1) 150%), 
-    url('/images/noise-mobile.svg'); 
-      filter: contrast(170%) brightness(150%);
-}
-
-.shape-overlay {
-    position: absolute;
-    top: 0;
-    width: 20rem;
-    height: 20rem;
-    border-radius: 50% 50% 41% 59% / 54% 42% 58% 46% ;  
-    background: blue;
-    opacity: 0.1;
-    mix-blend-mode: multiply;
-}
+}         

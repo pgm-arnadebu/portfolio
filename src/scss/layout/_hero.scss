@@ -1,13 +1,13 @@
 .hero {
     position: relative;
-    height: 100vh;
-    width: 100vw;
+    padding: 0 2rem;
+    @include full-screen();
 
     &::before {
         content: "";
         position: absolute;
-        height: 1px;
-        width: 5rem;
+        height: 1.5px;
+        width: 10vw;
         background-color: $color-secondary;
         left: 0;
         bottom: 22.5vh;
@@ -23,28 +23,105 @@
         top: 0;
     }
 
-
     .hero__content {
-        height: 100%;
-        width: 100%;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        @include full-spacing();
+        @include flex-column-justify-between();
+        @include wrapper();
 
         .hero__body {
             color: $color-primary;
             text-align: center;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
+            @include flex-column-center();
+            gap: 0.75rem;
+
+            .hero__shape {
+                margin-bottom: 3.5rem;
+                display: flex;
+
+                @include screen-md {
+                    margin-bottom: 4rem;
+                
+                }
+
+                @include screen-lg {
+                    margin-bottom: 4.5rem;
+                }
+
+                @include screen-xl {
+                    margin-bottom: 5rem;
+                }
+
+                * {
+                    position: relative;
+                        width: 30vw;
+                        height: 35vw;
+                    // max-width: 9rem;
+                    // max-height: 10rem;
+
+                    @include screen-sm {
+                        width: 25vw;
+                        height: 30vw;                        
+                    }
+                    
+                    @include screen-md {
+                        width: 20vw;
+                        height: 25vw;
+                        // max-width: 11rem;
+                        // max-height: 12rem;
+                    }
+                    
+                    @include screen-lg {
+                        width: 17.5vw;
+                        height: 22.5vw;
+                        // max-width: 12rem;
+                        // max-height: 13rem;                    
+                    }
+
+                    @include screen-xl {
+                        width: 13vw;
+                        height: 15.5vw;
+                    }
+                }
+
+                .d-1 {
+                    transform: scale(1) rotate(10deg);
+                    top: 20%;
+                    left: 23%;
+                    opacity: 0.9;
+                
+                }
+                
+                .d-2 {
+                    transform: scale(1.2) rotate(8.5deg);
+                    left: 3%;
+                    opacity: 1;
+                }
+                
+                .d-3 {     
+                    transform: scale(1.1) rotate(-9deg);
+                    top: 9%;
+                    left: -20%;
+                    opacity: 0.9;
+                }
+            }
 
             .hero__name {
                 font-size: 6vw;
                 line-height: 1.25;
                 position: relative;
                 z-index: 100;
+
+                @include screen-sm {
+                    font-size: 2rem;
+                }
+
+                @include screen-md {
+                    font-size: 2.25rem;
+                }
+
+                @include screen-lg {
+                    font-size: 2.5rem;
+                }
 
                 &::before {
                     content: "";
@@ -59,24 +136,17 @@
             }
 
             .hero__title {
-                font-size: 3vw;
+                font-size: 3.5vw;
                 z-index: 100;
-            }
 
-            .hero__shape {
-                opacity: 0.8;
+                @include screen-sm {
+                    font-size: 1rem;
+                }
 
-                .shape-noise,
-                .shape-overlay {
-                    position: absolute;
-                    height: 80vw; 
-                    width: 80vw;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
+                @include screen-md {
+                    font-size: 1.25rem;
                 }
             }
-            
         }
 
 
@@ -86,6 +156,14 @@
             margin: 0 4rem 0.5rem 0;
             gap: 0.5rem;
             position: relative;
+            
+            @include screen-lg {
+                margin: 0 8rem 0.5rem 0;
+            }
+
+            @include screen-lg {
+                margin: 0 10rem 0.5rem 0;
+            }
 
             &::before {
                 content: "Scroll";
@@ -96,6 +174,11 @@
                 font-size: 1rem;
                 right: -3rem;
                 top: 1.5rem;
+
+                @include screen-lg {
+                    font-size: 1.1rem;
+                    right: -3.5rem
+                }
             }
 
             p {
@@ -103,11 +186,26 @@
                 font-size: 0.8rem;
                 position: relative;
 
+                @include screen-sm {
+                    width: 17rem;
+                    font-size: 0.9rem;
+                }
+
+                @include screen-md {
+                    width: 18rem;
+                    font-size: 1rem;
+                }
+
+                @include screen-lg {
+                    width: 18rem;
+                    font-size: 1rem;
+                }
+
 
                 &::before {
                     content: "";
                     position: absolute;
-                    height: 10rem;
+                    height: 12.5rem;
                     width: 1px;
                     background-color: black;
                     right: 0;

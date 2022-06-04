@@ -4,7 +4,7 @@ p {
     margin-bottom: 1rem;
 }
 
-.heading {
+.block-heading {
     font-size: 2rem;
     position: relative;
     text-align: center;
@@ -20,9 +20,15 @@ p {
         transform: translateX(-50%);
         content: "";
     }
+
+    @include screen-lg {
+        margin-bottom: 6rem;
+    }
+
+
 }
 
-.heading--white {
+.block-heading--white {
     color: white;
 
     &::after {

@@ -1,0 +1,25 @@
+.isolate {
+    isolation: isolate;
+    mix-blend-mode: color-burn;
+}
+
+.shape-noise {
+    width: 15rem;
+    height: 17.5rem;
+    border-radius: 0 50% 50% 0;  
+    background: 
+    radial-gradient(circle, rgba(239, 239, 239, 0) 0%, rgba(0,0,0,1) 150%), 
+    url('/images/noise-mobile.svg');
+    filter: contrast(130%) brightness(150%);
+}
+
+.shape-overlay {
+    position: absolute;
+    top: 0;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50% 50% 41% 59% / 54% 42% 58% 46% ;  
+    background: blue;
+    opacity: 0.1;
+    mix-blend-mode: multiply;
+}
