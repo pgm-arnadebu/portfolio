@@ -6,11 +6,19 @@
 .shape-noise {
     width: 15rem;
     height: 17.5rem;
-    border-radius: 0 50% 50% 0;  
-    background: 
-    radial-gradient(circle, rgba(239, 239, 239, 0) 0%, rgba(0,0,0,1) 150%), 
-    url('/images/noise-mobile.svg');
-    filter: contrast(130%) brightness(150%);
+    border-radius: 0 50% 50% 0;
+    background:
+        radial-gradient(circle, rgba(239, 239, 239, 0.1) 30%, $color-primary-3 160%),
+        url('/images/noise.svg');
+    mix-blend-mode: color-burn;
+    background-size: cover;
+    
+    // background:
+    //     linear-gradient(72.1deg, rgba(205, 205, 205, 0) 1.7%, rgb(0, 0, 0) 99.1%),
+    //     url('/images/noise.svg');
+    //     mix-blend-mode: color-burn;
+    // filter: contrast(200%) brightness(150%);
+
 }
 
 .shape-overlay {
@@ -18,7 +26,7 @@
     top: 0;
     width: 20rem;
     height: 20rem;
-    border-radius: 50% 50% 41% 59% / 54% 42% 58% 46% ;  
+    border-radius: 50% 50% 41% 59% / 54% 42% 58% 46%;
     background: blue;
     opacity: 0.1;
     mix-blend-mode: multiply;

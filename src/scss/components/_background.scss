@@ -3,6 +3,9 @@
     top: 0;
     left: 0;
     background-image: auto;
-    opacity: 0.5;
+    background-size: contain;
+    opacity: 0.8;
+    overflow-y: hidden;
     z-index: -5;
+    filter: brightness(110%);
 }      

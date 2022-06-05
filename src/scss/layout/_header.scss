@@ -9,38 +9,67 @@
 
     .header__logo {
         width: 2.5rem;
-        fill: $color-primary;
+        fill: $color-primary-1;
     }
 
     .header__nav {
-        color: $color-primary;
         position: relative;
-        font-family: ocr-a-std, monospace;
 
-        &::before {
-            content: "";
+        .header__nav-title {
+            color: $color-primary-1;
+            position: relative;
+            font-family: ocr-a-std, monospace;
+            font-size: 0.9rem;
+
+            @include screen-lg {
+                font-size: 1rem;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 1px;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: $color-neutral-4;
+                left: -1.5rem;
+                z-index: 100;
+            }
+        }
+
+        .header__nav-items {
             position: absolute;
-            height: 100%;
-            width: 1px;
-            background-color: $color-secondary;
-            left: -1.5rem;
-            z-index: 100;
+            @include flex-column;
+            gap: 0.5rem;
+            margin-top: 1rem;
+
+            .header__nav-item {
+                a {
+                    color: $color-primary-1;
+                    font-size: 0.9rem;
+                }
+            }
         }
     }
 
-    .header__contact {
-        margin-left: auto;
-        position: relative;
+    .header__socials {
+        display: none;
 
-        &::before {
-            content: "";
-            position: absolute;
-            height: 7rem;
-            width: 1px;
-            background-color: black;
-            top: -3rem;
-            left: -10rem;
-            z-index: 100;
+        @include screen-md {
+            margin-left: auto;
+            position: relative;
+            display: flex;
+            font-size: 1.4rem;
+            gap: 1rem;
+
+            a {
+                color: $color-primary-1;
+            }
+        }
+
+        @include screen-lg {
+            font-size: 1.5rem;
         }
     }
 }
