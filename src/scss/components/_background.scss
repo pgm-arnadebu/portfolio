@@ -2,10 +2,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-image: auto;
-    background-size: contain;
+    // background-image: auto;
+    background-size: cover;
     opacity: 0.8;
-    overflow-y: hidden;
     z-index: -5;
     filter: brightness(110%);
 }      

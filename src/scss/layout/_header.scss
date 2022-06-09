@@ -6,6 +6,8 @@
     width: 100%;
     margin-bottom: 2.5rem;
     @include wrapper-md;
+    position: sticky;
+    top: 0;
 
     .header__logo {
         width: 2.5rem;
@@ -65,6 +67,11 @@
 
             a {
                 color: $color-primary-1;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: #46e0c9;
+                }
             }
         }
 

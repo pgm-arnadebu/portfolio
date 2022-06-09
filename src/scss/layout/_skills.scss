@@ -1,12 +1,18 @@
 .skills {
-    background-color: $color-primary;
+    background-color: $color-primary-1;
     padding: 5rem 0;
     position: relative;
     width: 100vw;
+    
+    @include screen-xl {
+        padding: 10rem 0;
+
+    }
 
     .skills__content {
         @include flex-column-center;
         gap: 5rem;
+        @include wrapper-sm;
         
         @include screen-md {
             margin-bottom: 2.5rem;
@@ -17,6 +23,7 @@
 
         @include screen-xl {
             gap: 7.5rem;
+            justify-content: space-between
         }
     
         .skill {
@@ -37,6 +44,10 @@
                 @include screen-lg {
                     width: 12rem;
                 }
+
+                @include screen-xl {
+                    width: 13rem;
+                }
             }
             
             .skill__name {
@@ -51,6 +62,10 @@
 
                 @include screen-lg {
                     font-size: 1rem;
+                }
+                
+                @include screen-xl {
+                    font-size: 1.1rem;
                 }
             }
         }

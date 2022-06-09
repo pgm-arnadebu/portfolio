@@ -16,10 +16,18 @@
             margin-bottom: 0;
         }
 
+        @include screen-xl {
+            padding-left: 0;
+        }
+
         &.inverted {
             align-items: end;
             padding-left: 0;
             padding-right: 2rem;
+
+            @include screen-xl {
+                padding-right: 0;
+            }
         }
 
         .tools__title {
@@ -142,10 +150,11 @@
             .d-2 {
                 transform: scale(1.4) rotate(-9deg);
                 opacity: 0.1;
-                left: 20%;
+                left: 30%;
                 bottom: 10%;
-
+                
                 @include screen-sm {
+                    left: 25%;
                     transform: scale(2) rotate(-9deg);
                     bottom: 30%;
                 }

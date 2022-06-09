@@ -1,23 +1,24 @@
 .about {
     width: 100vw;
-    margin-top: 10rem;
+    margin-top: 5rem;
 
     .about__content {
         @include flex-column-center;
-        @include wrapper-md;
-
-        @include screen-lg {
-            gap: 5rem;
-        }
-
-        @include screen-xl {
-            gap: 7.5rem;
-        }
 
         @include screen-md {
             flex-direction: row;
             padding: 0 2rem;
+            @include wrapper-md;
             justify-content: center;
+            gap: 2rem;
+        }
+        
+        @include screen-lg {
+            justify-content: space-evenly;
+        }
+
+        @include screen-xl {
+            gap: 7.5rem;
         }
 
         .about__text {
@@ -28,16 +29,25 @@
 
             @include screen-sm {
                 font-size: 1rem;
+                margin-bottom: 3rem;
                 width: calc(100vw - 8rem);
             }
 
             @include screen-md {
                 font-size: 0.9rem;
+                margin-bottom: 4rem;
                 width: 30rem;
+                padding: 0 2rem;
+            }
+
+            @include screen-lg {
+                font-size: 1rem;
+                padding: 0;
             }
 
             @include screen-xl {
-                font-size: 1rem;
+                margin-bottom: 5rem;
+                font-size: 1.1rem;
                 width: 35rem;
             }
         }
@@ -50,7 +60,8 @@
             left: 20%;
 
             @include screen-md {
-                left: 3%;
+                left: 0;
+                transform: scale(1.2);
             }
 
             @include screen-lg {
@@ -59,7 +70,8 @@
             }
 
             @include screen-xl {
-                transform: scale(1.43);
+                bottom: 15%;
+                transform: scale(1.6);
             }
         }
 
@@ -67,6 +79,8 @@
             position: relative;
             width: 18rem;
             z-index: 100;
+            filter: contrast(95%);
+
         }
 
         .about__shape {
@@ -79,7 +93,7 @@
             .shape-noise {
                 height: 20rem;
                 width: 20rem;
-                opacity: 0.9;
+                opacity: 0.25;
             }
         }
     }
