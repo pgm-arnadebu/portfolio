@@ -1,10 +1,7 @@
-import {
-  gsap
-} from 'gsap';
-import {
-  ScrollTrigger
-} from 'gsap/ScrollTrigger';
-gsap.registerPlugin(ScrollTrigger);
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { TextPlugin } from 'gsap/TextPlugin';
+gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
 export const animations = {
   init() {
@@ -19,88 +16,115 @@ export const animations = {
     this.animateQuote();
     this.animateProjects();
     this.animateFooter();
-
   },
   animateHeader() {
+    const $navItems = document.querySelector('.header__nav-items');
+    const $navContainer = document.querySelector('.header__nav');
 
+    $navContainer.addEventListener('mouseover', (ev) => {
+      ev.preventDefault(); 
+      $navItems.classList.remove('hide');
+      tl.play();
+    });
+    
+    $navContainer.addEventListener('mouseout', (ev) => {
+      ev.preventDefault(); 
+      tl.reverse();
+      tl.reverse() ? console.log('ja') : console.log('no');
+    });
+
+    let tl = gsap.timeline({
+      paused: true,
+      defaults: {ease: 'Power4.easeOut'}
+    });
+    
+    tl
+    .from(('.header__nav-item'), {
+      x: -100,
+      stagger: 0.1,
+      opacity: 0,
+      onStart: () => $navItems.classList.remove('hide'),
+      onReverseComplete: () => $navItems.classList.add('hide')
+    })
+    .to(('.header__seperation-line'), {
+      height: '10rem',  
+    }, '<0.25');
   },
   animateHero() {
-    this.fadeFromBottom = (query) => gsap.from((query), {
-      y: 150,
-      opacity: 0,
-      duration: 0.75,
-      ease: 'power3'
-    });
+    let tl = gsap.timeline({
+      defaults: {
+        ease: 'power4.out'   
+    }});
 
-    this.scaleFromMiddle = (query) => gsap.from((query), {
-      scale: 0,
-      y: 150,
-      duration: 0.75,
-      opacity: 0,
-      ease: 'rough'
-    });
+    tl
+    .from('.d-1', {duration: 1, x: -500, opacity: 0, y: -200, rotate: -100})
+    .from('.d-2', {duration: 1, opacity: 0, y: -500, rotate: -100}, '<0.075')
+    .from('.d-3', {duration: 1, x: 500, opacity: 0, y: -200, rotate: -100, }, '<0.05')
+    .from('.hero__name', {y: -100, opacity: 0}, '<0.2')
+    .from('.hero__title', {scale: 0}, '<0.1')
+    .from('header' , {y: -100, opacity: 0, duration: 1}, '<0.15')
+    .from('.hero__footer', {y: 200, opacity: 0, duration: 1 }, '<0.45');
 
-    this.scaleFromMiddle('.hero__shape');
-    this.scaleFromMiddle('.hero__name');
-    this.scaleFromMiddle('.hero__title');
-    // scaleFromMiddle('.hero__footer');
-
-
+    this.animateHeroFooter();
   },
-  animateAbout() {
-    gsap.from('.about', {
+  animateHeroFooter() {
+    gsap.to('.cursor', {
+      opacity: 0, 
+      ease: 'Power4.easeOut', 
+      repeat: -1,
+      onComplete: () => this.animateScrollEl()
+    });
+    
+    let tl = gsap.timeline();
+    tl.to('.text', {text: {value: 'Creatieve duizendpoot, begeesterd door code met een vurige passie voor design <3'}, duration: 6.5, delay: 1, ease: 'none'});
+  },
+  animateAbout() {    
+    gsap.from('#about', {
       y: 400,
       opacity: 0,
       duration: 1,
+      ease: 'Power4.easeOut',
       scrollTrigger: {
         trigger: '.hero__footer',
         start: 'bottom 90%',
       }
     });
 
-    gsap.to('.hero', {
+    gsap.from('.about__shape', {
+      scale: 0,
       duration: 1,
-      opacity: 0,
-      ease: 'power2',
+      ease: 'Power4.easeOut',
       scrollTrigger: {
+        trigger: '.about__content',
+        start: '-400 60%',
+      }
+    });
+
+    gsap.to('#hero', {
+      opacity: 0,
+      scrollTrigger: {
+        trigger: '#hero',
         scrub: true,
-        trigger: '.hero__footer',
-        start: 'top 50%',
+        start: 'bottom 60%',
       }
     });
   },
   animateSkills() {
-    gsap.set('.about', {
-      opacity: 1
-    });
-
-    gsap.to('.about', {
-      opacity: 0,
-      ease: 'power2',
-      scrollTrigger: {
-        scrub: true,
+    let tl = gsap.timeline({
+      ease: 'Power4.easeOut',
+        scrollTrigger: {
         trigger: '.skills',
-        start: 'top 50%',
-        end: 'top 1%',
-      }
-    });
-
-
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: '.skills',
-        start: 'top 85%',
-      }
+        start: 'top 75%',
+        }
     });
 
     tl
     .from('#skills-heading', {
-      opacity: 0,
-        duration: 1,
-        y: 100,
+        opacity: 0,
+        y: 200,
         ease: 'power2'
-      })
-      .from('.skill', {
+    })
+    .from('.skill', {
         opacity: 0,
         stagger: 0.25,
         duration: 0.5,
@@ -114,7 +138,7 @@ export const animations = {
       duration: 2,
       stagger: 0.3,
       y: 100,
-      ease: 'power3',
+      ease: 'Power4.easeOut',
       scrollTrigger: {
         trigger: '.tools__content',
         start: '-100 85%',
@@ -147,18 +171,27 @@ export const animations = {
       opacity: 0,
         duration: 1,
         y: 100,
-        ease: 'power2'
+        ease: 'Power4.easeOut'
       })
       .from('.project', {
         opacity: 0,
         stagger: 0.25,
         duration: 0.5,
-        y: 100,
-        ease: 'power2'
+        y: 50,
+        ease: 'Power4.easeOut'
       });
   },
   animateFooter() {
-    this.scaleFromMiddle('.footer__content');
+    gsap.from('.footer__content', {
+      opacity: 0,
+      duration: 1,
+      y: 100,
+      ease: 'Power4.easeOut',
+      scrollTrigger: {
+        trigger: 'footer',
+        start: 'top 50%',
+      }
+    } );
   }
 };
 

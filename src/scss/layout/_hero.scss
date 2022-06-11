@@ -18,7 +18,7 @@
         position: absolute;
         width: 1px;
         height: 7.5rem;
-        background-color: $color-secondary-1;
+        background-color: $color-neutral-4;
         right: 30vw;
         top: 0;
     }
@@ -35,7 +35,6 @@
             @include flex-column-center();
             gap: 0.75rem;
             margin-top: 2.5rem;
-
 
             .hero__shape {
                 margin-bottom: 3.5rem;
@@ -59,8 +58,6 @@
                     position: relative;
                         width: 30vw;
                         height: 35vw;
-                    // max-width: 9rem;
-                    // max-height: 10rem;
 
                     @include screen-sm {
                         width: 8.5rem;
@@ -162,11 +159,6 @@
             gap: 0.5rem;
             position: relative;
             opacity: 1;
-
-            .text {
-                height: 10rem;
-                width: 10rem;
-            }
             
             @include screen-lg {
                 margin: 0 8rem 0.5rem 0;
@@ -174,6 +166,10 @@
 
             @include screen-lg {
                 margin: 0 10rem 0.5rem 0;
+            }
+            
+            @include screen-xl {
+                margin: 0 10rem 1rem 0;
             }
 
             &::before {
@@ -194,10 +190,11 @@
 
             p {
                 width: 15rem;
+                height: 6rem;
                 font-size: 0.8rem;
                 position: relative;
                 color: $color-primary-1;
-
+                padding-right: 1rem;
 
                 @include screen-sm {
                     width: 17rem;

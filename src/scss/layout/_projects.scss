@@ -1,5 +1,6 @@
 .projects {
     @include wrapper-md;
+    margin-bottom: 7.5rem;
 
     h2 {
         text-align: center;
@@ -80,6 +81,7 @@
                 color: $color-neutral-2;
                 opacity: 0;
                 top: 0;
+                transition: all 0.3s ease;
 
                 &:hover {
                     opacity: 1;
@@ -115,10 +117,16 @@
                     padding: 0.5rem;
                     text-align: center;
                     display: block;
+                    transition: all 0.3s ease;
 
                     @include screen-md {
-                        font-size: 0.9rem;
+                        font-size: 0.8rem;
                     } 
+
+                    &:hover {
+                        background-color: $color-hover;
+                        color: $color-neutral-1;
+                    }
                 }
             }
         }

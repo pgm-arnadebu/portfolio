@@ -58,6 +58,7 @@
             transform: scale(1.1);
             position: relative;
             left: 20%;
+            filter: brightness(95%) contrast(100%);
 
             @include screen-md {
                 left: 0;

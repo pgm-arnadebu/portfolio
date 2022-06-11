@@ -1,7 +1,7 @@
 .header {
     display: flex;
     align-items: center;
-    gap: 3rem;
+    gap: 2rem;
     height: 6rem;
     width: 100%;
     margin-bottom: 2.5rem;
@@ -14,11 +14,22 @@
         fill: $color-primary-1;
     }
 
+    .header__seperation-line {
+            height: 1.5rem;
+            width: 1px;
+            position: relative; 
+            top: 2.25rem;
+            background-color: $color-neutral-4;
+            align-self: start;
+    }
+
     .header__nav {
         position: relative;
 
-        .header__nav-title {
-            color: $color-primary-1;
+        .header__menu {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
             position: relative;
             font-family: ocr-a-std, monospace;
             font-size: 0.9rem;
@@ -27,16 +38,12 @@
                 font-size: 1rem;
             }
 
-            &::before {
-                content: "";
-                position: absolute;
-                height: 100%;
-                width: 1px;
-                top: 50%;
-                transform: translateY(-50%);
-                background-color: $color-neutral-4;
-                left: -1.5rem;
-                z-index: 100;
+            a {
+                color: $color-primary-1;
+            }
+
+            i {
+                font-size: 0.8rem;
             }
         }
 
@@ -44,13 +51,19 @@
             position: absolute;
             @include flex-column;
             gap: 0.5rem;
-            margin-top: 1rem;
+            padding: 1rem 0;
 
             .header__nav-item {
                 a {
                     color: $color-primary-1;
                     font-size: 0.9rem;
+                    transition: color 0.3s ease;
+
+                    &:hover {
+                        color: #46e0c9;
+                    }
                 }
+
             }
         }
     }

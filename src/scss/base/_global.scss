@@ -19,8 +19,14 @@ body {
     font-family: ocr-a-std, monospace;
     color: $color-primary;
     line-height: 1.5;
+    position: relative;
+    z-index: -100;
 }
 
 .hide {
-    display: none;
+   visibility: hidden;
 }         
+
+.show {
+    visibility: visible;
+}

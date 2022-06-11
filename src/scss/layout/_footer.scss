@@ -1,5 +1,6 @@
 .footer {
     background-color: $color-primary;
+    margin-bottom: 10rem;
     .footer__content {
         @include wrapper-sm;
         @include flex-column-center;
@@ -29,6 +30,12 @@
             font-size: 0.9rem;
             padding: 0.5rem 1rem;
             background-color: $color-neutral-2;
+            transition: all 0.2s ease;
+
+            &:hover {
+                background-color: $color-hover;
+                color: $color-neutral-1;
+            }
         }
     }
 }

@@ -1,10 +1,6 @@
 .bg-noise {
-    position: absolute;
-    top: 0;
-    left: 0;
-    // background-image: auto;
-    background-size: cover;
-    opacity: 0.8;
-    z-index: -5;
-    filter: brightness(110%);
+    background-image: url('/images/noise.svg');
+    background-size: contain;
+    mix-blend-mode: color-burn;
+    filter: contrast(90%) brightness(110%);
 }      
