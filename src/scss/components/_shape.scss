@@ -12,13 +12,7 @@
         url('/images/noise.svg');
     mix-blend-mode: color-burn;
     background-size: cover;
-    
-    // background:
-    //     linear-gradient(72.1deg, rgba(205, 205, 205, 0) 1.7%, rgb(0, 0, 0) 99.1%),
-    //     url('/images/noise.svg');
-    //     mix-blend-mode: color-burn;
-    // filter: contrast(200%) brightness(150%);
-
+    overflow-x: hidden;
 }
 
 .shape-overlay {

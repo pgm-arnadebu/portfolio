@@ -30,7 +30,6 @@ export const animations = {
     $navContainer.addEventListener('mouseout', (ev) => {
       ev.preventDefault(); 
       tl.reverse();
-      tl.reverse() ? console.log('ja') : console.log('no');
     });
 
     let tl = gsap.timeline({
@@ -76,7 +75,7 @@ export const animations = {
     });
     
     let tl = gsap.timeline();
-    tl.to('.text', {text: {value: 'Creatieve duizendpoot, begeesterd door code met een vurige passie voor design <3'}, duration: 6.5, delay: 1, ease: 'none'});
+    tl.to('.text', {text: {value: 'Creatieve duizendpoot, begeesterd door code met een vurige passie voor design <3'}, duration: 5, delay: 1, ease: 'none'});
   },
   animateAbout() {    
     gsap.from('#about', {

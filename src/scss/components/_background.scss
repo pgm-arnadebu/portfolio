@@ -1,6 +1,6 @@
 .bg-noise {
     background-image: url('/images/noise.svg');
-    background-size: contain;
+    background-size: cover;
     mix-blend-mode: color-burn;
     filter: contrast(90%) brightness(110%);
 }      
